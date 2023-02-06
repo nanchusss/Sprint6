@@ -2,6 +2,7 @@ import Escena from "./Components/Escena/Escena";
 import Header from "./Components/Escena/Botones";
 import { useState } from "react";
 import Textos from "./Components/Frases";
+import Bienvenida from "./Components/Escena/PaginaBienvenida";
 
 //En App está todo. Las props de los componentes por ejemplo, las funciones y todas las importaciones.
 function App() {
@@ -24,12 +25,23 @@ function App() {
       }
     });
   };
-  return (
+  //Seteando el estado
+  const [State, setState] = useState(true);
+  //funcion que cambia de pagina
+  const start = () => {
+    setState((a) => !a);
+    console.log("de true a false");
+    //de true a false
+  };
+  const renderizado = State ? (
+    <Bienvenida iniciar={start} />
+  ) : (
     <>
       <Header changeEscena={changeEscena}> </Header>
       <Escena numEscena={numEscena}></Escena>;
     </>
   );
+  return <div className="App">{renderizado}</div>;
 }
 
 export default App;

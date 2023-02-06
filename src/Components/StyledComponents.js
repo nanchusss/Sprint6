@@ -1,5 +1,45 @@
 import styled from "styled-components";
 import Textos from "./Frases";
+import Bienvenida from "../images/inicio.jpg";
+
+//Bienvenida
+export const Welcome = styled.div`
+  h1 {
+    font-size: 72px;
+  }
+
+  p {
+    font-size: 32px;
+  }
+
+  button {
+    min-width: 200px;
+    min-height: 90px;
+    border-radius: 10%;
+    font-size: 22px;
+    padding: 10px;
+    background-color: #fff6;
+    &:hover {
+      background-color: #ff5;
+      opacity: 0.8;
+      box-shadow: 0px 7px 33px 24px rgba(248, 255, 177, 0.54);
+    }
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: initial;
+  font-size: larger;
+  color: white;
+  gap: 0.8rem;
+
+  height: 750px;
+  background-image: url(${Bienvenida});
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
 
 //Botones del Header
 export const Buttons = styled.div`
