@@ -78,12 +78,13 @@ export const Phrases = styled.div`
 //Estilo del Body. Background con imagen 0 del array.
 
 export const BodyStyled = styled.body`
-  background-image: url(${Textos[0].img});
+  background-image: url(${(props) => props.background});
   height: 1000px;
   width: 100%;
   background-size: cover;
-  display: flex;
+  display: column;
   position: relative;
+  flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: center;
 `;

@@ -3,6 +3,7 @@ import Header from "./Components/Escena/Botones";
 import { useState } from "react";
 import Textos from "./Components/Frases";
 import Bienvenida from "./Components/Escena/PaginaBienvenida";
+import { BodyStyled } from "./Components/StyledComponents";
 
 //En App está todo. Las props de los componentes por ejemplo, las funciones y todas las importaciones.
 function App() {
@@ -36,10 +37,10 @@ function App() {
   const renderizado = State ? (
     <Bienvenida iniciar={start} />
   ) : (
-    <>
+    <BodyStyled background={Textos[numEscena].img}>
       <Header changeEscena={changeEscena}> </Header>
       <Escena numEscena={numEscena}></Escena>;
-    </>
+    </BodyStyled>
   );
   return <div className="App">{renderizado}</div>;
 }
