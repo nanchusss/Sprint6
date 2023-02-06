@@ -10,10 +10,11 @@ const Escena = (props) => {
             <Phrases
               // Recordatorio: podemos asignar como key el index del elemento
               key={index}
-              active={props.numeroEscena}
-              //incial state de 0.
+              active={
+                props.numEscena === Textos.indexOf(element) ? "pink" : "white"
+              }
             >
-              {/* Acá (item.texto) estamos poniendo del Componente ArrayImgTxt (que está compuesto de objetos con propiedad texto e imagen) el valor de texto. Eso es lo que nos va a renderizar */}
+              {/* Acá (item.texto) estamos poniendo del Componente Textos (que está compuesto de objetos con propiedad texto e imagen) el valor de texto. Eso es lo que nos va a renderizar */}
               {console.log(
                 "renderizado de frases y cambiando índice para pintar de rosa"
               )}

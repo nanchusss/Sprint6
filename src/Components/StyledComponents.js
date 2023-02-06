@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArrayImgTxt from "./Frases";
+import Textos from "./Frases";
 
 //Botones del Header
 export const Buttons = styled.div`
@@ -29,7 +29,7 @@ export const Phrases = styled.div`
   border-radius: 2rem;
   border: 1px solid black;
   opacity: 0.8;
-  background-color: white;
+  background-color: ${(props) => props.active};
   //acá setea el color según active.
   width: 95%;
   min-width: 90vw;
@@ -38,7 +38,7 @@ export const Phrases = styled.div`
 //Estilo del Body. Background con imagen 0 del array.
 
 export const BodyStyled = styled.body`
-  background-image: url(${ArrayImgTxt[0].img});
+  background-image: url(${Textos[0].img});
   height: 1000px;
   width: 100%;
   background-size: cover;

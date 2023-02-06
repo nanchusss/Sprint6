@@ -1,4 +1,3 @@
-import "./App.css";
 import Escena from "./Components/Escena/Escena";
 import Header from "./Components/Escena/Botones";
 import { useState } from "react";
@@ -6,13 +5,13 @@ import Textos from "./Components/Frases";
 
 //En App está todo. Las props de los componentes por ejemplo, las funciones y todas las importaciones.
 function App() {
-  const [numeroEscena, seteoNumEscena] = useState(0);
+  const [numEscena, seteoNumEscena] = useState(0);
   //a es pasado por botón (puede ser 1 o -1)
 
   const changeEscena = (a) => {
     seteoNumEscena((indice) => {
       if (indice + a < 0) {
-        console.log("Cambio con el primer if y va para atrás");
+        console.log("Retrocede");
         return indice;
       }
       if (indice + a >= Textos.length) {
@@ -28,7 +27,7 @@ function App() {
   return (
     <>
       <Header changeEscena={changeEscena}> </Header>
-      <Escena></Escena>;
+      <Escena numEscena={numEscena}></Escena>;
     </>
   );
 }
