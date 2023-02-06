@@ -3,7 +3,7 @@ import Image2 from "../images/2.jpg";
 import Image3 from "../images/3.jpg";
 import Image4 from "../images/4.jpg";
 //importamos todas las imagenes y los textos para irlos llamando
-const ArrayImgTxt = [
+const Textos = [
   {
     texto:
       "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial",
@@ -25,4 +25,4 @@ const ArrayImgTxt = [
     img: Image4,
   },
 ];
-export default ArrayImgTxt;
+export default Textos;

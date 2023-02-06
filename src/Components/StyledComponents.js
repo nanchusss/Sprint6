@@ -41,7 +41,6 @@ export const BodyStyled = styled.body`
   background-image: url(${ArrayImgTxt[0].img});
   height: 1000px;
   width: 100%;
-  margin-left: 0px;
   background-size: cover;
   display: flex;
   position: relative;

@@ -1,15 +1,17 @@
 import { BodyStyled, Phrases } from "../StyledComponents";
-import ArrayImgTxt from "../Frases";
+import Textos from "../Frases";
 
-const Escena = () => {
+const Escena = (props) => {
   return (
     <>
       <BodyStyled>
         <div>
-          {ArrayImgTxt.map((element, index) => (
+          {Textos.map((element, index) => (
             <Phrases
               // Recordatorio: podemos asignar como key el index del elemento
               key={index}
+              active={props.numeroEscena}
+              //incial state de 0.
             >
               {/* Acá (item.texto) estamos poniendo del Componente ArrayImgTxt (que está compuesto de objetos con propiedad texto e imagen) el valor de texto. Eso es lo que nos va a renderizar */}
               {console.log(
